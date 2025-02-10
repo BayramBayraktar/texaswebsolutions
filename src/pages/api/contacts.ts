@@ -4,8 +4,9 @@ import Contact from '../../models/contact'
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
     if (req.method === 'POST') {
-        
+
         const newContact = new Contact({
             Name: req.body.Name,
             Email: req.body.Email,
@@ -22,5 +23,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             return console.log(error)
         }
 
+    }
+    if (req.method === 'GET') {
+        return res.json('Contact api Page')
     }
 }
