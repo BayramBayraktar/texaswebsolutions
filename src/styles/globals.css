@@ -2,20 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* ----font------ */
+
+@font-face {
+  font-family: 'Font1';
+  src: url('/fonts/font1.woff2') format('woff2');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+body.fixed {
+  overflow: hidden;
+}
+
+
+/* ---- slider ----- */
+
+.slider-wrapper {
+  position: relative; 
+  overflow: hidden; 
+}
+
+
+
+.slick-slider .slick-arrow {
+  position: absolute; 
+  top: 35%;
+  display: block !important;
+  z-index: 999;
+  height: 45px;
+  width: 45px;
+  background-color: #7ed6df;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.slick-slider .slick-prev {
+  left: 15px !important;
+}
+
+.slick-slider .slick-next {
+  right: 15px !important;
+}
+
+.slick-prev:before {
+  content: "<" !important;
+  font-size: 30px;
+}
+
+.slick-next:before {
+  content: ">" !important;
+  font-size: 30px;
+}
+
+
+.isActiveMenu {
+  position: absolute !important;
+  display: block;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #032127;
+  padding: 20px;
+}
+
+.isActiveMenu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.isActiveMenu ul li {
+  margin-top: 20px;
+}
+
+.isActiveMenu ul li a:not(.active-link) {
+  color: white !important;
+}
+
