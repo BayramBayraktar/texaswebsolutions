@@ -5,8 +5,7 @@ import Contact from '../../models/contact'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
-        await ConnectDb()
-
+        
         const newContact = new Contact({
             Name: req.body.Name,
             Email: req.body.Email,
@@ -15,6 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         })
 
         try {
+            await ConnectDb()
             await newContact.save()
             return res.json('Your message has been successfully delivered, we will contact you as soon as possible.')
 
