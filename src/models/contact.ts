@@ -18,8 +18,8 @@ const contactSchma = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+}, { timestamps: true })
 
-const Contact = mongoose.models.Contact || mongoose.model('Contact' , contactSchma);
+const Contact = mongoose.models.Contact || mongoose.model('Contact', contactSchma);
 
 export default Contact
