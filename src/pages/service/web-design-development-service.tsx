@@ -1,6 +1,6 @@
 import Layout from '../../layout/index'
 import PartnerSlider from '../../components/PartnerSlider'
-
+import Image from 'next/image';
 const ServiceDetail = () => {
 
     return (
@@ -13,7 +13,18 @@ const ServiceDetail = () => {
                 <span className='font-Font1 text-black px-3 py-1 rounded-2xl border-x-1 border-y-2 text-base md:text-sm border-[rgba(126,214,223,.25)] bg-[rgba(126,214,233,.15)]'>Web design development service</span>
                 <h1 className='my-12 text-2xl md:text-5xl font-Font1 md:w-[60%]'>Web Design and Development Services</h1>
                 <p className='leading-7 w-full md:w-[60%]'>In today’s digital landscape, having a professionally designed website is essential for business growth. Our web design and development services focus on creating custom, high-performance websites that enhance user experience and drive conversions. Whether you are a startup, an established company, or an agency, we offer tailored solutions to meet your needs.</p>
-                <img className='object-cover h-screen  hidden md:block w-full rounded-2xl mt-8  shadow-xl ' src="../images/designservice.jpg" alt='' />
+
+                <div className='w-full relative mt-8 hidden md:block'>
+                    <div className='w-full h-[600px] relative'>
+                        <Image
+                            src="/images/designservice.jpg"
+                            alt="Web Design and Development Services"
+                            fill
+                            className="object-cover rounded-2xl shadow-xl"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
+                </div>
 
                 <div className='slider-wrapper mt-24'>
                     <PartnerSlider />

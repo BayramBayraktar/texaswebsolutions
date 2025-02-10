@@ -1,6 +1,6 @@
 import Layout from '../../layout/index'
 import PartnerSlider from '../../components/PartnerSlider'
-
+import Image from 'next/image';
 const SeoDigitalMarketing = () => {
 
     return (
@@ -15,7 +15,19 @@ const SeoDigitalMarketing = () => {
                 <h1 className="my-12 text-xl md:text-5xl font-Font1 md:w-[60%]">Best Digital Marketing Agency & SEO Services</h1>
                 <p className="leading-7  md:w-3/5">As a top digital marketing agency, we deliver comprehensive SEO and market analysis services that drive real business results. Our custom digital marketing solutions are designed to enhance your online presence and improve your search rankings across all major platforms.</p>
 
-                <img className="object-cover h-screen  hidden md:block w-full rounded-2xl mt-8 shadow-xl" src="../images/seodetailpage.jpg" alt="Digital Marketing Services" />
+
+                <div className='w-full relative mt-8 hidden md:block'>
+                    <div className='w-full h-[600px] relative'>
+                        <Image
+                            src="/images/seodetailpage.jpg"
+                            alt="Best Digital Marketing & SEO Service"
+                            fill
+                            className="object-cover rounded-2xl shadow-xl"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
+                </div>
+
 
                 <div className="slider-wrapper mt-24">
                     <PartnerSlider />

@@ -1,6 +1,7 @@
 
 import Layout from '../../layout/index'
 import PartnerSlider from '../../components/PartnerSlider'
+import Image from 'next/image';
 
 const EcommerceDevelopment = () => {
 
@@ -16,7 +17,18 @@ const EcommerceDevelopment = () => {
                 <h1 className="my-12 text-xl md:text-5xl font-Font1 md:w-3/5">Best E-commerce Development Company & Website Services</h1>
                 <p className="leading-7 md:w-3/5">As the best development company for e-commerce solutions, we deliver custom website services that transform your online business. Our top-rated software development team specializes in creating scalable, high-performance e-commerce platforms tailored to your unique needs.</p>
 
-                <img className="object-cover h-screen w-full rounded-2xl mt-8 hidden md:block shadow-xl" src="../images/ecommercedetail.jpg" alt="E-commerce Development Services" />
+                <div className='w-full relative mt-8 hidden md:block'>
+                    <div className='w-full h-[600px] relative'>
+                        <Image
+                            src="/images/ecommercedetail.jpg"
+                            alt="Best E-commerce Development Company & Website Services"
+                            fill
+                            className="object-cover rounded-2xl shadow-xl"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
+                </div>
+
 
                 <div className="slider-wrapper mt-24">
                     <PartnerSlider />

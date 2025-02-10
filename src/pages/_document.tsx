@@ -4,6 +4,11 @@ import 'animate.css';
 export default function Document() {
   return (
     <Html lang="en">
+      <link rel="icon"
+        href="/images/-TWS-.png"
+        type="image/x-icon"
+      />
+
       <link
         rel="stylesheet"
         type="text/css"

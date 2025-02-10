@@ -18,22 +18,25 @@ export default function Header() {
     useEffect(() => {
         const handleScroll = () => {
             if (headerRef.current && buttonRef.current) {
-                headerRef.current.style.backgroundColor = window.scrollY === 0 ? '#032127' : '#ffffff';
+                const header = headerRef.current as HTMLElement;
+                const button = buttonRef.current as HTMLElement;
 
-                buttonRef.current.style.backgroundColor = window.scrollY === 0 ? '#ffffff' : '#000000';
-                buttonRef.current.style.color = window.scrollY === 0 ? '#032127' : '#ffffff';
+                header.style.backgroundColor = window.scrollY === 0 ? '#032127' : '#ffffff';
 
-                const links = headerRef.current.querySelectorAll('a:not(.active-link)');
+                button.style.backgroundColor = window.scrollY === 0 ? '#ffffff' : '#000000';
+                button.style.color = window.scrollY === 0 ? '#032127' : '#ffffff';
+
+                const links = header.querySelectorAll('a:not(.active-link)');
                 links.forEach(link => {
-                    link.style.color = window.scrollY === 0 ? '#ffffff' : '#032127';
+                    (link as HTMLElement).style.color = window.scrollY === 0 ? '#ffffff' : '#032127';
                 });
             }
         };
 
         window.addEventListener('scroll', handleScroll);
-
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
 
 
     useEffect(() => {

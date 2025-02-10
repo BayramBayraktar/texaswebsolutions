@@ -16,7 +16,7 @@ const Form = () => {
 
     const handleSubmit = async () => {
         const { Name, Email, Phone, Message } = state;
-    
+
         try {
             const response = await axios.post(`/api/contacts`, {
                 Name,
@@ -24,7 +24,7 @@ const Form = () => {
                 Phone,
                 Message
             });
-    
+
             setState((prev) => ({
                 ...prev,
                 responsemsg: response.data,
@@ -33,12 +33,12 @@ const Form = () => {
                 Phone: "",
                 Message: ""
             }));
-    
+
         } catch (error) {
             console.error(error);
         }
     };
-    
+
 
     return (
         <div className=' md:w-[40%] flex flex-col gap-6 p-10 rounded-2xl bg-[#3c989ec2]  shadow-[0_0_10px_rgba(126,214,223,0.4),0_0_20px_rgba(126,214,223,0.2)]'>
@@ -59,7 +59,7 @@ const Form = () => {
 
             <div className='flex flex-col gap-1'>
                 <label htmlFor='message-form' className='text-base font-Font1' >MESSAGE</label>
-                <textarea value={state.Message} onChange={(e) => setState((prev) => ({ ...prev, Message: e.target.value }))} className='p-3 rounded-md font-Font1' placeholder='Write Message...' id='message-form' > </textarea>
+                <textarea  onChange={(e) => setState((prev) => ({ ...prev, Message: e.target.value }))} className='p-3 rounded-md font-Font1' placeholder='Write Message...' id='message-form' > </textarea>
             </div>
             <p className=' text-base'>{state.responsemsg}</p>
             <button onClick={() => handleSubmit()} className='text-xl font-Font1 text-black py-3 px-5 rounded-2xl bg-white' type='button'>SEND MESSAGE</button>

@@ -1,8 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Layout from '../../layout/index'
-
-
+import Image from 'next/image'
 
 const Service = () => {
     return (
@@ -14,11 +13,18 @@ const Service = () => {
             <div className='w-full max-w-screen-xl mx-auto mt-12 px-3 py-24'>
                 <span className='font-Font1 text-black px-3 py-1 rounded-2xl border-x-1 border-y-2 text-xl md:text-sm border-[rgba(126,214,223,.25)] bg-[rgba(126,214,233,.15)]'>Services</span>
                 <h1 className='my-12 md:w-[60%] font-Font1 text-2xl md:text-6xl'>Explore the Features That Simplify Your Success</h1>
-                <p className='leading-7 md:w-[60%]'>Transform your online presence with our expert web design, SEO optimization, and web development services. We create fast, responsive, and user-friendly websites tailored to your business needs. Boost your visibility on search engines and grow your business with our cutting-edge solutions. Let’s build something amazing together</p>
+                <p className='leading-7 md:w-[60%]'>Transform your online presence with our expert web design, SEO optimization, and web development services. We create fast, responsive, and user-friendly websites tailored to your business needs. Boost your visibility on search engines and grow your business with our cutting-edge solutions. Lets build something amazing together</p>
 
                 <div className='w-full mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 '>
                     <div className='bg-[rgb(247,247,247)]  flex flex-col justify-between hover:bg-[rgb(237,250,250)] p-6 shadow-lg overflow-hidden rounded-2xl'>
-                        <img className='object-cover rounded-2xl max-h-[320px] h-fit' src="./images/webdesigner.jpg" alt='' />
+                        <div className='relative w-full h-[320px]'>
+                            <Image 
+                                src="/images/webdesigner.jpg" 
+                                alt="Web Design & Development" 
+                                fill 
+                                className='object-cover rounded-2xl' 
+                            />
+                        </div>
                         <div className='mt-4 flex flex-col justify-between'>
                             <h1 className='text-2xl'>Web Design & Development</h1>
                             <p className='text-sm opacity-80 my-2'>We create custom, responsive, and user-friendly websites tailored for small businesses, ensuring a strong online presence.</p>
@@ -26,7 +32,14 @@ const Service = () => {
                         </div>
                     </div>
                     <div className='bg-[rgb(247,247,247)]  flex flex-col justify-between hover:bg-[rgb(237,250,250)] p-6 shadow-lg overflow-hidden rounded-2xl'>
-                        <img className='object-cover rounded-2xl max-h-fit' src="./images/seoMarketing.png" alt='' />
+                        <div className='relative w-full h-[320px]'>
+                            <Image 
+                                src="/images/seoMarketing.png" 
+                                alt="SEO & Digital Marketing" 
+                                fill 
+                                className='object-cover rounded-2xl' 
+                            />
+                        </div>
                         <div className='mt-4'>
                             <h1 className='text-2xl'>SEO & Digital Marketing</h1>
                             <p className='text-sm opacity-80 my-2'>Boost your search rankings and attract more customers with our SEO strategies, local optimization, and digital marketing solutions.</p>
@@ -34,7 +47,14 @@ const Service = () => {
                         </div>
                     </div>
                     <div className='bg-[rgb(247,247,247)]  flex flex-col justify-between hover:bg-[rgb(237,250,250)] p-6 shadow-lg overflow-hidden rounded-2xl'>
-                        <img className='object-cover rounded-2xl max-h-fit' src="./images/eCommerce.png" alt='' />
+                        <div className='relative w-full h-[320px]'>
+                            <Image 
+                                src="/images/eCommerce.png" 
+                                alt="E-Commerce Development" 
+                                fill 
+                                className='object-cover rounded-2xl' 
+                            />
+                        </div>
                         <div className='mt-4'>
                             <h1 className='text-2xl'>E-Commerce Development</h1>
                             <p className='text-sm opacity-80 my-2'>Launch and scale your online store with our expert e-commerce development, including secure payment integration and mobile-friendly designs.</p>
@@ -42,7 +62,14 @@ const Service = () => {
                         </div>
                     </div>
                     <div className='bg-[rgb(247,247,247)]  flex flex-col justify-between hover:bg-[rgb(237,250,250)] p-6 shadow-lg overflow-hidden rounded-2xl'>
-                        <img className='object-cover rounded-2xl max-h-[320px] h-fit' src="./images/Customsoftwaresolutions.jpg" alt='' />
+                        <div className='relative w-full h-[320px]'>
+                            <Image 
+                                src="/images/Customsoftwaresolutions.jpg" 
+                                alt="Custom Software Solutions" 
+                                fill 
+                                className='object-cover rounded-2xl' 
+                            />
+                        </div>
                         <div className='mt-4'>
                             <h1 className='text-2xl'>Custom Software Solutions</h1>
                             <p className='text-sm opacity-80 my-2'>We develop scalable and high-performance software tailored to your business needs, helping you stay ahead in your industry</p>
@@ -51,10 +78,8 @@ const Service = () => {
                     </div>
                 </div>
             </div>
-        </Layout >
+        </Layout>
     )
 }
 
 export default Service
-
-

@@ -54,8 +54,16 @@ export default function Home() {
               <h2 className='text-black font-semibold font-Font1 text-xl md:text-3xl mb-3'>Stand Out with Optimized Keywords</h2>
               <p className='text-black opacity-80 text-sm md:text-base'>We craft the right strategies to put you ahead of your competitors. Let us harness the power of keywords to make your brand shine in the digital world!</p>
             </div>
-            <div className='w-full overflow-hidden'>
-              <img className='md:rounded-tl-2xl float-none md:mx-0 mx-auto md:float-end shadow-2xl' src='./images/grap-1.png' alt='' />
+            <div className='w-full  overflow-hidden'>
+              <div className='w-full aspect-video md:rounded-tl-2xl float-none md:mx-0 mx-auto md:float-end shadow-2xl relative'>
+                <Image
+                  src="/images/grap-1.png"
+                  alt=''
+                  fill
+                  className=''
+                
+                />
+              </div>
             </div>
           </div>
           <div className='grid md:grid-cols-2 grid-cols-1 gap-8'>
@@ -96,7 +104,7 @@ export default function Home() {
               <div className='w-full'>
                 <h1 className='text-black font-Font1 text-3xl mb-3'>Unmatched Support</h1>
                 <h1 className='text-black font-Font1 text-xl' >Unmatched Support: Always Available</h1>
-                <p className='text-black text-sm my-2'>When you call our company, you'll speak directly with me, the owner and developer. No phone trees or robots - just personalized assistance whenever you need it.</p>
+                <p className='text-black text-sm my-2'>When you call our company, you will speak directly with me, the owner and developer. No phone trees or robots - just personalized assistance whenever you need it.</p>
               </div>
 
             </div>

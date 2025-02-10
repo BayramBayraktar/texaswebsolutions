@@ -1,6 +1,7 @@
 
 import Layout from '../../layout/index'
 import PartnerSlider from '../../components/PartnerSlider'
+import Image from 'next/image';
 
 const CustomSoftwareSolutionsPage = () => {
     return (
@@ -15,7 +16,17 @@ const CustomSoftwareSolutionsPage = () => {
                 <h1 className="my-12 text-xl md:text-5xl font-Font1 md:w-3/5">Best Custom Software Development Solutions</h1>
                 <p className="leading-7 md:w-3/5">As the best software development company, we deliver custom solutions that transform your business operations. Our professional development team specializes in creating scalable, high-performance software tailored to your unique requirements.</p>
 
-                <img className="object-cover h-screen w-full rounded-2xl mt-8 hidden md:block shadow-xl" src="../images/CustomSoftwareSolutionsdetayl.jpg" alt="Custom Software Solutions" />
+                <div className='w-full relative mt-8 hidden md:block'>
+                    <div className='w-full h-[600px] relative'>
+                        <Image
+                            src="/images/CustomSoftwareSolutionsdetayl.jpg"
+                            alt="Custom Software Solutions"
+                            fill
+                            className="object-cover rounded-2xl shadow-xl"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
+                </div>
 
                 <div className="slider-wrapper mt-24">
                     <PartnerSlider />
