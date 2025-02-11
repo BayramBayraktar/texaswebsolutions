@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 const contactSchma = new mongoose.Schema({
     Name: {
         type: String,
-        unique: true,
         required: true
     },
     Email: {
