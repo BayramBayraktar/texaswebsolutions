@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 import { FaCheckCircle } from "react-icons/fa";
 import { GoPackage } from "react-icons/go";
 
@@ -31,27 +32,27 @@ const Price = () => {
                     <h2 className='text-black mb-6 md:mb-2 text-xl font-Font1'>Features</h2>
                     <ul className='flex flex-col gap-4'>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>5 Professional Pages.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>5 Professional Pages.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Premium Mobile-Responsive Design.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Premium Mobile-Responsive Design.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Local Seo.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Local Seo.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Google Business, Local Directories, Maps.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Google Business, Local Directories, Maps.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>1-Year Free Domain + Hosting + SSL.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>1-Year Free Domain + Hosting + SSL.</p>
                         </li>
                     </ul>
-                    <button className='w-full mt-4 p-3 text-center outline-none rounded-3xl bg-black text-white font-Font1 text-sm'>Get Started</button>
+                    <Link href="/contact" className='w-full mt-4 p-3 text-center outline-none rounded-3xl bg-black text-white font-Font1 text-sm'>Get Started</Link>
                 </div>
                 <div className='bg-[rgb(200,242,242)] py-8 flex flex-col justify-between px-5 rounded-2xl w-full md:w-1/3'>
                     <div className='flex items-center gap-3'>
@@ -75,33 +76,32 @@ const Price = () => {
                     <h2 className='text-black mb-6 md:mb-2 text-xl font-Font1'>Features</h2>
                     <ul className='flex flex-col gap-4'>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>All Starter Package Features.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>All Starter Package Features.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Custom Design with Basic Modifications.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Custom Design with Basic Modifications.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Integrated Contact Form & Appointment System.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Integrated Contact Form & Appointment System.</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Basic E-Commerce (Product Listing, Add to Cart).</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Basic E-Commerce (Product Listing, Add to Cart).</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>3 Months of Free Support (Updates & Technical Assistance).</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>3 Months of Free Support (Updates & Technical Assistance).</p>
                         </li>
                         <li className='flex items-center gap-2'>
-                        <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
-                        <p className='md:text-base text-sm text-gray-800 '>Google Analytics Setup.</p>
+                            <FaCheckCircle className='text-2xl w-6 md:w-8 flex-shrink-0' />
+                            <p className='md:text-base text-sm text-gray-800 '>Google Analytics Setup.</p>
                         </li>
                     </ul>
-                    <button className='w-full mt-4 p-3 text-center outline-none rounded-3xl bg-black text-white font-Font1 text-sm'>
-                        Get Started
-                    </button>
+                    <Link href="/contact" className='w-full mt-4 p-3 text-center outline-none rounded-3xl bg-black text-white font-Font1 text-sm'>Get Started</Link>
+
                 </div>
 
                 <div className='bg-[rgb(200,242,242)] py-8 flex flex-col justify-between px-5 rounded-2xl w-full md:w-1/3'>
@@ -146,9 +146,8 @@ const Price = () => {
                         </li>
 
                     </ul>
-                    <button className='w-full mt-4 p-3 text-center outline-none rounded-3xl bg-black text-white font-Font1 text-sm'>
-                        Get Started
-                    </button>
+                    <Link href="/contact" className='w-full mt-4 p-3 text-center outline-none rounded-3xl bg-black text-white font-Font1 text-sm'>Get Started</Link>
+
                 </div>
             </div>
         </div>
