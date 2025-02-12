@@ -100,7 +100,7 @@ export default function Footer() {
                             </div>
                         </div>
                     </div>
-                    <h2 className="text-center py-8 border-t-2 text-[12px] font-semibold  border-gray-200">Copyright © 2025 Texsaswebsolutions. All rights reserved.</h2>
+                    <h2 className="text-center py-8 border-t-2 text-[12px] font-semibold  border-gray-200">Copyright © 2025 WDDS. All rights reserved.</h2>
                 </div>
             </div>
 
