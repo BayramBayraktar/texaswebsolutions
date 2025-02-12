@@ -7,6 +7,7 @@ export default function Document() {
         href="/images/-TWS-.png"
         type="image/x-icon"
       />
+      <meta name="trustpilot-one-time-domain-verification-id" content="97da5b14-94e8-43a9-bfbb-a691e9136b74"/>
 
       <link
         rel="stylesheet"
