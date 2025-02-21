@@ -57,7 +57,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
         } catch (error) {
-            console.error('Detailed error:', error);
+            if (error instanceof Error) {
+                console.error('Error Message:', error.message);
+                console.error('Error Stack:', error.stack);
+            } else {
+                console.error('An unknown error occurred:', error);
+            }
+
             return res.status(500).json({
                 success: false,
                 message: 'Internal Server Error',
