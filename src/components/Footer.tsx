@@ -88,19 +88,18 @@ export default function Footer() {
                                 <h1 className="font-Font1 text-2xl md:text-base my-4">Contact us</h1>
                                 <ul className="flex flex-col gap-y-6">
                                     <div><b className="text-sm">Email: </b><Link className="text-gray-800 font-medium text-xl md:text-sm" href="mailto:texsaswebsolutions@gmail.com">texsaswebsolutions@gmail.com</Link></div>
-                                    <div><b className="text-sm">Phone: </b><Link className="text-gray-800 font-medium text-xl md:text-sm" href="tel:">---</Link></div>
+                                    <div><b className="text-sm">Whatsapp: </b><Link className="text-gray-800 font-medium text-xl md:text-sm"  href="https://wa.me/+905315278986">Whatsapp</Link></div>
                                 </ul>
                             </div>
                             <div className="md:w-1/3 w-full">
                                 <h1 className="font-Font1 my-4">Social Media</h1>
                                 <ul className="flex flex-col gap-y-6">
-                                    <Link className="text-gray-800 font-medium text-xl md:text-sm" target="_blank" rel="noopener noreferrer" href={"https://www.facebook.com/people/Bayram-Bayraktar/pfbid0DuhzN3yfztM99yMQn1TzQPS4BvSTFejBD4JRb5Qae1fSAU7NEvKG8jQHDzbiF6jsl/"} >Facebook</Link>
                                     <Link className="text-gray-800 font-medium text-xl md:text-sm" target="_blank" rel="noopener noreferrer" href={"https://www.linkedin.com/company/texas-web-solutions/?viewAsMember=true"} >Linkedin</Link>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <h2 className="text-center py-8 border-t-2 text-[12px] font-semibold  border-gray-200">Copyright © 2025 WDDS. All rights reserved.</h2>
+                    <h2 className="text-center py-8 border-t-2 text-[12px] font-semibold  border-gray-200">Copyright © 2025 <b>Texas Web Solutions.</b> All rights reserved.</h2>
                 </div>
             </div>
 

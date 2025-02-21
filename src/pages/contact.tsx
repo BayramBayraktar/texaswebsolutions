@@ -2,10 +2,8 @@ import React from 'react'
 import Layout from '../layout/index'
 import Link from 'next/link';
 import WeCreatedSlider from '@/components/weCreated';
-import { MdOutlineLocalPhone } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 
 import Form from '@/components/Form';
@@ -21,51 +19,22 @@ const Contact = () => {
                 <div className='flex flex-col md:flex-row gap-10 mt-28 justify-between'>
                     <div className='md:w-[50%]'>
                         <small className='text-sm font-Font1'>CONTACT US</small>
-                        <h1 className='text-4xl font-Font1 mt-2 mb-4'>GET IN TOUCH</h1>
-                        <p className='text-base'>Tell us everything you’re looking for in a new website! Shoot us an email or give us a call—we’ll get back to you as soon as possible. If we’re unavailable, don’t worry—we’ll call you back the same day. We’re here to listen and bring your ideas to life!</p>
+                        <h1 className='text-4xl font-Font1 mt-2 mb-4'>Feel Free to Say Hello – We’re Here to Help!</h1>
+                        <p className='text-base'>{"Have a question or an idea in mind? Don’t hesitate to reach out! We’re happy to offer a free consultation and guide you in the right direction. Whether it's a new project, a collaboration, or just a simple inquiry, our friendly team is ready to assist you. Contact us today – we’d love to hear from you!"}</p>
                         <div className='flex flex-col gap-8 mt-8'>
-                            <div className='flex gap-6 items-center'>
-                                <MdOutlineLocalPhone className='text-2xl w-12 h-12 border border-gray-800 rounded-full p-3 shadow-sm shadow-black' />
-                                <div className='flex flex-col gap-2'>
-                                    <span className='font-Font1 text-xl'>Phone</span>
-                                    <Link className="text-gray-800 font-medium text-xl" href="tel:-----">------</Link>
-                                </div>
-                            </div>
-                            <div className='flex gap-6 items-center'>
+                            <Link href="mailto:texsaswebsolutions@gmail.com" className='text-xl flex items-center gap-4 mt-2'>
                                 <MdOutlineEmail className='text-2xl w-12 h-12 border border-gray-800 rounded-full p-3 shadow-sm shadow-black' />
-                                <div className='flex flex-col gap-2'>
-                                    <span className='font-Font1 text-xl'>Email</span>
-                                    <Link href="mailto:texsaswebsolutions@gmail.com" className='text-xl'>Texas Web Solutions</Link>
-                                </div>
-                            </div>
-                            <div className='flex gap-6 items-center'>
+                                <span className='font-Font1 text-xl'>Email</span>
+                            </Link>
+                            <Link href="https://wa.me/+905315278986" className='text-xl flex gap-4 mt-2 items-center' target="_blank" rel="noopener noreferrer">
                                 <FaWhatsapp className='text-2xl w-12 h-12 border border-gray-800 rounded-full p-3 shadow-sm shadow-black' />
-                                <div className='flex flex-col gap-2'>
-                                    <span className='font-Font1 text-xl'>Whatsapp</span>
-                                    <Link href="https://wa.me/-------" className='text-xl' target="_blank" rel="noopener noreferrer">
-                                        ------
-                                    </Link>
-                                </div>
-                            </div>
+                                <span className='font-Font1 text-xl'>Whatsapp</span>
+                            </Link>
 
-                            <div className='flex gap-6 items-center'>
-                                <FaFacebook className='text-2xl w-12 h-12 border border-gray-800 rounded-full p-3 shadow-sm shadow-black' />
-                                <div className='flex flex-col gap-2'>
-                                    <span className='font-Font1 text-xl'>Facebook</span>
-                                    <Link href="https://www.facebook.com/people/Bayram-Bayraktar/pfbid0DuhzN3yfztM99yMQn1TzQPS4BvSTFejBD4JRb5Qae1fSAU7NEvKG8jQHDzbiF6jsl/" className='text-xl' target="_blank" rel="noopener noreferrer">
-                                        Bayram Bayraktar (Owner)
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className='flex gap-6 items-center'>
+                            <Link href="https://www.linkedin.com/company/texas-web-solutions/?viewAsMember=true" className='text-xl flex gap-4 mt-2 items-center' target="_blank" rel="noopener noreferrer">
                                 <FaLinkedinIn className='text-2xl w-12 h-12 border border-gray-800 rounded-full p-3 shadow-sm shadow-black' />
-                                <div className='flex flex-col gap-2'>
-                                    <span className='font-Font1 text-xl'>Linkedin</span>
-                                    <Link href="https://www.linkedin.com/company/texas-web-solutions/?viewAsMember=true" className='text-xl' target="_blank" rel="noopener noreferrer">
-                                        Texas Web Solutions
-                                    </Link>
-                                </div>
-                            </div>
+                                <span className='font-Font1 text-xl'>Linkedin</span>
+                            </Link>
 
                         </div>
                     </div>

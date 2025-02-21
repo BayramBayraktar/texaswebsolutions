@@ -14,10 +14,18 @@ export default function Home() {
       keywordContent='web design Texas, web development Texas, custom websites Texas, small business web design, Texas web solutions, professional web services Texas' >
 
       <div className='bg-[#032127]'>
+        <video
+          className="absolute opacity-15 top-0 left-0 w-full object-cover"
+          src="/video/bgvideo.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
         <div className='px-4 max-w-screen-xl mx-auto pt-28 flex items-start flex-col justify-center'>
           <div className='md:w-[50%]'>
             <span className='font-Font1 text-white px-3 py-1 rounded-2xl border-x-1 border-y-2 text-sm border-[rgba(126,214,223,.25)] bg-[rgba(126,214,233,.15)] animate__animated animate__fadeInDown'>Custom Development Solutions</span>
-            <h1 className='font-Font1 my-6 uppercase text-white  md:text-5xl text-2xl w-full maw-w-[100%] animate__animated animate__fadeInDown'>
+            <h1 className='font-Font1 my-6 uppercase text-white  md:text-3xl text-2xl w-full maw-w-[100%] animate__animated animate__fadeInDown'>
               Top <span className='text-[#FFA500]'>Web Design</span> & <span className='text-[#FFA500]'>Development Services</span> for Small Businesses<br />
               Build a Powerful <span className='text-[#00BFFF]'>Online Presence</span> with Professional <span className='text-[#00BFFF]'>Web Solutions</span>
             </h1>
@@ -31,14 +39,7 @@ export default function Home() {
           <div className="absolute -bottom-24 mb-2 left-0 w-full h-1/2 z-0 bg-white"></div>
           <div className="absolute -bottom-24 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-white z-20"></div>
         </div>
-        {/*        <video
-          className="absolute opacity-15 top-0 left-0 w-full object-cover"
-          src="/video/test.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        ></video> */}
+
       </div>
       <div className='relative w-full max-w-screen-2xl mx-auto overflow-hidden my-24 '>
         <WeCreatedSlider />
@@ -61,7 +62,7 @@ export default function Home() {
                   alt=''
                   fill
                   className=''
-                
+
                 />
               </div>
             </div>
