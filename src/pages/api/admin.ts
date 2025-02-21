@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import ConnectDb from '../../utils/db';
-/* import cookie from 'cookie';
- */import jwt from 'jsonwebtoken';
+import cookie from 'cookie';
+import jwt from 'jsonwebtoken';
 import User from '../../models/User';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -44,17 +44,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 { expiresIn: '1h' }
             );
             console.log('Token generated successfully');
-            res.json({ success: true, token })
+            res.json({ success: true })
 
-            /*  if (token) {
-                 res.setHeader('Set-Cookie', cookie.serialize('session', token, {
-                     httpOnly: true,
-                     maxAge: 60 * 60,
-                     sameSite: "strict",
-                     path: "/"
-                 })).json({ success: true })
-             }
-  */
+            if (token) {
+                res.setHeader('Set-Cookie', cookie.serialize('session', token, {
+                    httpOnly: true,
+                    maxAge: 60 * 60,
+                    sameSite: "strict",
+                    path: "/"
+                })).json({ success: true })
+            }
+
 
 
         } catch (error) {

@@ -21,7 +21,7 @@ const Admin = () => {
             const response = await axios.post(`/api/admin`, {
                 Email,
                 Password
-            });
+            }, { withCredentials: true });
 
             setState((prev) => ({
                 ...prev,
@@ -29,7 +29,6 @@ const Admin = () => {
                 Email: "",
 
             }));
-            console.log(response.data)
 
             if (response.data.success) {
                 return router.push('/admin/contact')
