@@ -81,7 +81,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             }
         });
 
-        // Check if we have data and messages
         if (response.data && Array.isArray(response.data)) {
             return {
                 props: {
