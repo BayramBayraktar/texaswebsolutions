@@ -29,6 +29,7 @@ const Admin = () => {
                 Email: "",
 
             }));
+            console.log(response.data)
 
             if (response.data.success) {
                 return router.push('/admin/contact')
