@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import ConnectDb from '../../utils/db';
-import cookie from 'cookie';
-import jwt from 'jsonwebtoken';
+/* import cookie from 'cookie';
+ */import jwt from 'jsonwebtoken';
 import User from '../../models/User';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
