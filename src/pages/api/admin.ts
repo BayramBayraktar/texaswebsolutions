@@ -44,16 +44,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 { expiresIn: '1h' }
             );
             console.log('Token generated successfully');
+            res.json({ success: true, token })
 
-            if (token) {
-                res.setHeader('Set-Cookie', cookie.serialize('session', token, {
-                    httpOnly: true,
-                    maxAge: 60 * 60,
-                    sameSite: "strict",
-                    path: "/"
-                })).json({ success: true })
-            }
-
+            /*  if (token) {
+                 res.setHeader('Set-Cookie', cookie.serialize('session', token, {
+                     httpOnly: true,
+                     maxAge: 60 * 60,
+                     sameSite: "strict",
+                     path: "/"
+                 })).json({ success: true })
+             }
+  */
 
 
         } catch (error) {
