@@ -7,7 +7,6 @@ import User from '../../models/User';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
         try {
-            // MongoDB bağlantısını dene
             await ConnectDb();
             console.log('MongoDB connected successfully');
 
@@ -17,59 +16,58 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             const user = await User.findOne({ Email });
             if (!user) {
                 console.log('User not found');
-                return res.status(401).json({ 
-                    success: false, 
-                    message: 'Invalid email or password' 
+                return res.status(401).json({
+                    success: false,
+                    message: 'Invalid email or password'
                 });
             }
 
             if (user.Password !== Password) {
                 console.log('Invalid password');
-                return res.status(401).json({ 
-                    success: false, 
-                    message: 'Invalid email or password' 
+                return res.status(401).json({
+                    success: false,
+                    message: 'Invalid email or password'
                 });
             }
 
             if (!process.env.SECRET_KEY) {
                 console.error('SECRET_KEY is missing');
-                return res.status(500).json({ 
-                    success: false, 
-                    message: 'Configuration error' 
+                return res.status(500).json({
+                    success: false,
+                    message: 'Configuration error'
                 });
             }
 
             const token = jwt.sign(
-                { id: user._id }, 
-                process.env.SECRET_KEY, 
+                { id: user._id },
+                process.env.SECRET_KEY,
                 { expiresIn: '1h' }
             );
             console.log('Token generated successfully');
 
             res.setHeader('Set-Cookie', cookie.serialize('auth', token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production',
-                sameSite: 'lax',
-                path: '/',
-                maxAge: 3600
-            }));
+                maxAge: 60 * 60,
+                sameSite: "strict",
+                path: "/"
+            })).json({ success: true })
 
-            return res.json({ 
-                success: true, 
-                message: 'Login successful' 
+            return res.json({
+                success: true,
+                message: 'Login successful'
             });
 
         } catch (error) {
             console.error('Detailed error:', error);
-            return res.status(500).json({ 
-                success: false, 
+            return res.status(500).json({
+                success: false,
                 message: 'Internal Server Error',
             });
         }
     }
 
-    return res.status(405).json({ 
-        success: false, 
-        message: 'Method Not Allowed' 
+    return res.status(405).json({
+        success: false,
+        message: 'Method Not Allowed'
     });
 }
