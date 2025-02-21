@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (req.method === 'GET') {
         try {
             const cookies = req.headers.cookie ? cookie.parse(req.headers.cookie) : {};
-            const token = cookies.auth;
+            const token = cookies.session;
 
             if (!token) {
                 return res.status(401).json({ error: 'Unauthorized: No token provided' });

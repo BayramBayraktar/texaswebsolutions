@@ -45,17 +45,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             );
             console.log('Token generated successfully');
 
-            res.setHeader('Set-Cookie', cookie.serialize('auth', token, {
-                httpOnly: true,
-                maxAge: 60 * 60,
-                sameSite: "strict",
-                path: "/"
-            })).json({ success: true })
+            if (token) {
+                res.setHeader('Set-Cookie', cookie.serialize('session', token, {
+                    httpOnly: true,
+                    maxAge: 60 * 60,
+                    sameSite: "strict",
+                    path: "/"
+                })).json({ success: true })
+            }
 
-            return res.json({
-                success: true,
-                message: 'Login successful'
-            });
+
 
         } catch (error) {
             console.error('Detailed error:', error);
