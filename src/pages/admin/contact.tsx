@@ -1,4 +1,5 @@
 import { GetServerSideProps } from 'next';
+
 interface Contact {
     _id: string;
     Name: string;
@@ -69,35 +70,49 @@ export default function ContactPage({ contacts }: Props) {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     try {
-
-        const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/contacts`, {
-            headers: {
-                Cookie: context.req.headers.cookie || ''
-            }
-        });
-
-        const response = await data.json();
-
-        console.log(data)
-
-        if (response.data && Array.isArray(response.data)) {
+        const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
+        const { host } = context.req.headers;
+        const apiUrl = `${protocol}://${host}/api/contacts`;
+        
+        const sessionToken = context.req.cookies.session;
+        
+        if (!sessionToken) {
+            console.log('No session token found');
             return {
-                props: {
-                    contacts: response.data
+                redirect: {
+                    destination: '/admin',
+                    permanent: false,
                 }
             };
         }
-
+        
+        console.log('Making API request to:', apiUrl);
+        
+        const response = await fetch(apiUrl, {
+            headers: {
+                Authorization: `Bearer ${sessionToken}`,
+                Cookie: context.req.headers.cookie || ''
+            }
+        });
+        
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error(`API error (${response.status}):`, errorText.substring(0, 200));
+            throw new Error(`API returned status ${response.status}`);
+        }
+        
+        const contacts = await response.json();
+        console.log('Received contacts:', Array.isArray(contacts) ? contacts.length : 'not an array');
+        
         return {
-            redirect: {
-                destination: '/admin',
-                permanent: false,
+            props: {
+                contacts: Array.isArray(contacts) ? contacts : []
             }
         };
-
+        
     } catch (error) {
         console.error('Error fetching contacts:', error);
-
+        
         return {
             redirect: {
                 destination: '/admin',

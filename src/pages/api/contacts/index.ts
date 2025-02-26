@@ -8,7 +8,6 @@ import User from '../../../models/User';
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
     if (req.method === 'POST') {
         const newContact = new Contact({
             Name: req.body.Name,
@@ -31,6 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         try {
             const cookies = req.headers.cookie ? cookie.parse(req.headers.cookie) : {};
             const token = cookies.session;
+
 
             if (!token) {
                 return res.status(401).json({ error: 'Unauthorized: No token provided' });

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Layout from '../../layout/index'
+import Layout from '@/layout/index'
 import Image from 'next/image'
 
 const Service = () => {

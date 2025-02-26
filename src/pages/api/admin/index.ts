@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import ConnectDb from '../../../utils/db';
 import jwt from 'jsonwebtoken';
-import User from '../../../models/User';
+import User from '@/models/User';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST') {
@@ -47,6 +47,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             res.setHeader('Set-Cookie', `session=${token}; HttpOnly; Max-Age=${60 * 60}; Path=/; SameSite=Lax${process.env.NODE_ENV === "production" ? "; Secure" : ""}`);
 
             return res.status(200).json({ success: true });
+
         } catch (error) {
             if (error instanceof Error) {
                 console.error('Error Message:', error.message);

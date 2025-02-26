@@ -30,8 +30,6 @@ const Admin = () => {
 
             }));
 
-            console.log(response)
-
             if (response.data.success) {
                 return router.push('/admin/contact')
             }
