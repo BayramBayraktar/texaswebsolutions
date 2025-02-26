@@ -1,6 +1,4 @@
 import { GetServerSideProps } from 'next';
-import axios from 'axios';
-
 interface Contact {
     _id: string;
     Name: string;
@@ -71,15 +69,16 @@ export default function ContactPage({ contacts }: Props) {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
     try {
-        const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http';
-        const { host } = context.req.headers;
-        const apiUrl = `${protocol}://${host}/api/contacts`;
 
-        const response = await axios.get(apiUrl, {
+        const data = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/contacts`, {
             headers: {
                 Cookie: context.req.headers.cookie || ''
             }
         });
+
+        const response = await data.json();
+
+        console.log(data)
 
         if (response.data && Array.isArray(response.data)) {
             return {

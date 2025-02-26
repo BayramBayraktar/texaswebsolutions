@@ -8,6 +8,7 @@ import User from '../../../models/User';
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
     if (req.method === 'POST') {
         const newContact = new Contact({
             Name: req.body.Name,
