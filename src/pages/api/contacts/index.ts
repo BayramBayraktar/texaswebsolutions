@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import ConnectDb from '../../../utils/db';
 import Contact from '../../../models/contact';
-import cookie from 'cookie';
 import jwt from 'jsonwebtoken';
 import User from '../../../models/User';
 
@@ -28,8 +27,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (req.method === 'GET') {
         try {
-            const cookies = req.headers.cookie ? cookie.parse(req.headers.cookie) : {};
-            const token = cookies.session;
+            const authorization = req.headers.authorization;
+            const token = authorization ? authorization.split(" ")[1] : null;
 
 
             if (!token) {
