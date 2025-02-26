@@ -1,5 +1,4 @@
 import Layout from '../../layout/index'
-import PartnerSlider from '../../components/PartnerSlider'
 import Image from 'next/image';
 const ServiceDetail = () => {
 
@@ -26,9 +25,7 @@ const ServiceDetail = () => {
                     </div>
                 </div>
 
-                <div className='slider-wrapper mt-24'>
-                    <PartnerSlider />
-                </div>
+         
 
                 <h1 className='my-8  text-xl md:text-5xl w-full md:w-[60%] font-Font1'>Why Choose Our Web Design & Development Services?</h1>
                 <h2 className='text-base md:text-3xl font-Font1 mt-12'>1. Best Web Design & Development Company</h2>

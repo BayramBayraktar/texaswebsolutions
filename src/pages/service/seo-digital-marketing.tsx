@@ -1,5 +1,4 @@
 import Layout from '../../layout/index'
-import PartnerSlider from '../../components/PartnerSlider'
 import Image from 'next/image';
 const SeoDigitalMarketing = () => {
 
@@ -26,11 +25,6 @@ const SeoDigitalMarketing = () => {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                     </div>
-                </div>
-
-
-                <div className="slider-wrapper mt-24">
-                    <PartnerSlider />
                 </div>
 
                 <h1 className="my-8 text-xl md:text-5xl md:w-3/5 font-Font1">Why Choose Our Digital Marketing Services?</h1>

@@ -1,6 +1,5 @@
 
 import Layout from '../../layout/index'
-import PartnerSlider from '../../components/PartnerSlider'
 import Image from 'next/image';
 
 const CustomSoftwareSolutionsPage = () => {
@@ -28,9 +27,6 @@ const CustomSoftwareSolutionsPage = () => {
                     </div>
                 </div>
 
-                <div className="slider-wrapper mt-24">
-                    <PartnerSlider />
-                </div>
 
                 <h1 className="my-8 text-xl md:text-5xl md:w-3/5 font-Font1">Why Choose Our Custom Web Development Solutions?</h1>
 
@@ -69,7 +65,7 @@ const CustomSoftwareSolutionsPage = () => {
                 <li>Comprehensive testing and QA</li>
                 <li>Ongoing website maintenance</li>
 
-                <h1 className="my-8 text-xl md:text-5xl md:w-3/5 font-Font1">Why Partner With Our Web Development Company?</h1>
+                <h1 className="my-8 text-xl md:text-5xl md:w-3/5 font-Font1">Why  With Our Web Development Company?</h1>
                 <li>Industry-leading web development expertise</li>
                 <li>Customized solutions for every business size</li>
                 <li>Top-rated development services</li>

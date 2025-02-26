@@ -14,14 +14,14 @@ export default function Home() {
       keywordContent='web design Texas, web development Texas, custom websites Texas, small business web design, Texas web solutions, professional web services Texas' >
 
       <div className='bg-[#032127]'>
-        <video
+{/*         <video
           className="absolute opacity-15 top-0 left-0 w-full object-cover"
           src="/video/bgvideo.mp4"
           autoPlay
           loop
           muted
           playsInline
-        ></video>
+        ></video> */}
         <div className='px-4 max-w-screen-xl mx-auto pt-28 flex items-start flex-col justify-center'>
           <div className='md:w-[50%]'>
             <span className='font-Font1 text-white px-3 py-1 rounded-2xl border-x-1 border-y-2 text-sm border-[rgba(126,214,223,.25)] bg-[rgba(126,214,233,.15)] animate__animated animate__fadeInDown'>Custom Development Solutions</span>

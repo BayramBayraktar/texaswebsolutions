@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import ConnectDb from '../../utils/db';
-import Contact from '../../models/contact';
+import ConnectDb from '../../../utils/db';
+import Contact from '../../../models/contact';
 import cookie from 'cookie';
 import jwt from 'jsonwebtoken';
-import User from '../../models/User';
+import User from '../../../models/User';
 
 
 
