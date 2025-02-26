@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import ConnectDb from '../../../utils/db';
-import cookie from 'cookie'; 
 import jwt from 'jsonwebtoken';
 import User from '../../../models/User';
 
@@ -45,16 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             );
             console.log('Token generated successfully');
 
-            res.setHeader(
-                'Set-Cookie',
-                cookie.serialize('session', token, {
-                    httpOnly: true,
-                    maxAge: 60 * 60,
-                    sameSite: "lax",
-                    secure: process.env.NODE_ENV === "production",
-                    path: "/"
-                })
-            );
+            res.setHeader('Set-Cookie', `session=${token}; HttpOnly; Max-Age=${60 * 60}; Path=/; SameSite=Lax${process.env.NODE_ENV === "production" ? "; Secure" : ""}`);
 
             return res.status(200).json({ success: true });
         } catch (error) {
