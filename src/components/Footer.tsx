@@ -7,30 +7,68 @@ import Price from '@/components/price'
 export default function Footer() {
 
     const [activeIndex, setActiveIndex] = useState<number | null>();
-
     const faqData = [
         {
-            question: "Which is the best design company?",
-            answer: "The best design company depends on your needs. Whether you need web design, graphic design, or UI/UX services, researching best design company options will help you find the right fit."
+            question: "How long does SEO take to show results for my website?",
+            answer: "SEO is a long-term strategy. Most businesses see initial improvements in 3-6 months, but competitive industries may require 6-12 months of consistent technical SEO optimization and content development."
         },
         {
-            question: "What are the best software development companies?",
-            answer: " Leading firms in software development are known as best software development company options. They offer web, mobile, and custom software solutions."
+            question: "What's the difference between on-page SEO and off-page SEO?",
+            answer: "On-page SEO focuses on optimizing content, meta tags, and site structure. Off-page SEO involves building quality backlinks and online reputation through digital PR and local citations."
         },
         {
-            question: "What services do digital agencies offer?",
-            answer: "Digital agency services include web development, SEO, social media management, and online advertising."
+            question: "Why does mobile responsiveness matter for SEO rankings?",
+            answer: "Google uses mobile-first indexing. A mobile-friendly website with fast loading speeds improves user experience and directly impacts search rankings through Core Web Vitals metrics."
         },
         {
-            question: "Which is the best company for SEO services?",
-            answer: " To find the best SEO service, look for agencies that specialize in keyword optimization, technical SEO, and performance tracking."
+            question: "How often should I update my website content for SEO?",
+            answer: "Fresh content signals authority. Aim to update key pages quarterly and publish new blog posts weekly. Use tools like Google Search Console to identify outdated content needing refreshment."
         },
         {
-            question: "What is the best web design company?",
-            answer: "A best website design company should have a modern approach to design and prioritize user experience."
+            question: "What are the essential technical SEO elements for new websites?",
+            answer: "Prioritize XML sitemap submission, robots.txt optimization, schema markup implementation, canonical tags, and HTTPS security for strong technical SEO foundations."
+        },
+        {
+            question: "How can local SEO help my small business get more customers?",
+            answer: "Local SEO strategies like Google Business Profile optimization, localized content creation, and NAP consistency across directories can increase visibility in 'near me' searches by up to 300%."
+        },
+        {
+            question: "What's the ideal website loading speed for SEO?",
+            answer: "Aim for under 2.5 seconds. Google prioritizes sites scoring 90+ in PageSpeed Insights. Optimize images, leverage browser caching, and minimize render-blocking resources."
+        },
+        {
+            question: "How do featured snippets impact SEO strategy?",
+            answer: "Position zero snippets increase visibility by 35%. Optimize content with clear answers using header tags, bullet points, and structured data markup to target question-based queries."
+        },
+        {
+            question: "Why is website security (HTTPS) important for search rankings?",
+            answer: "HTTPS is a Google ranking factor. It builds user trust and prevents 'Not Secure' warnings. SSL implementation also protects sensitive data and improves conversion rates."
+        },
+        {
+            question: "What's the role of backlinks in modern SEO success?",
+            answer: "High-quality backlinks from authoritative sites remain crucial. Focus on earning links through data-driven content, expert roundups, and digital PR campaigns rather than buying links."
+        },
+        {
+            question: "How can I track SEO performance effectively?",
+            answer: "Use Google Search Console for technical insights, Google Analytics 4 for traffic analysis, Ahrefs/SEMrush for keyword tracking, and custom dashboards to monitor ROI metrics."
+        },
+        {
+            question: "What content length performs best for SEO in 2024?",
+            answer: "Comprehensive content (1,500-2,500 words) ranks best, but focus on quality over quantity. Use semantic keywords and answer searcher intent through pillar pages and topic clusters."
+        },
+        {
+            question: "How does voice search optimization differ from traditional SEO?",
+            answer: "Voice search requires natural language optimization. Target question phrases, optimize for featured snippets, and ensure your business information appears in knowledge panels."
+        },
+        {
+            question: "What are the most important Google ranking factors in 2024?",
+            answer: "Top factors include E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), Core Web Vitals, mobile-first indexing, and high-quality content aligned with user intent."
+        },
+        {
+            question: "Can AI-generated content hurt my website's SEO?",
+            answer: "Google rewards human-first content. While AI tools can assist research, always add unique insights and expert perspectives. Mass-produced AI content may trigger quality filters."
         }
     ];
-
 
     const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
@@ -88,7 +126,7 @@ export default function Footer() {
                                 <h1 className="font-Font1 text-2xl md:text-base my-4">Contact us</h1>
                                 <ul className="flex flex-col gap-y-6">
                                     <div><b className="text-sm">Email: </b><Link className="text-gray-800 font-medium text-xl md:text-sm" href="mailto:texsaswebsolutions@gmail.com">texsaswebsolutions@gmail.com</Link></div>
-                                    <div><b className="text-sm">Whatsapp: </b><Link className="text-gray-800 font-medium text-xl md:text-sm"  href="https://wa.me/+905315278986">Whatsapp</Link></div>
+                                    <div><b className="text-sm">Whatsapp: </b><Link className="text-gray-800 font-medium text-xl md:text-sm" href="https://wa.me/+905315278986">Whatsapp</Link></div>
                                 </ul>
                             </div>
                             <div className="md:w-1/3 w-full">

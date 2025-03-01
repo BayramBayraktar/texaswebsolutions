@@ -4,34 +4,29 @@ import Image from 'next/image'
 import Layout from '../layout/'
 import WeCreatedSlider from '../components/weCreated'
 import Reviews from '../components/reviews';
+import LandingDemoSlider from '@/components/landingdemoslider';
 
 export default function Home() {
 
   return (
     <Layout
-      title="Top Web Design & Development Services in Texas | Texsas Web Solutions"
-      description='Texsas Web Solutions offers the best web design and development services in Texas. We create custom, cutting-edge websites for small businesses to boost their online presence and drive results.'
-      keywordContent='web design Texas, web development Texas, custom websites Texas, small business web design, Texas web solutions, professional web services Texas' >
+      title="Top Web Design near you & Development |Texsas Web Solutions"
+      description='Web Solutions offers the best web design and development service. We create custom, cutting-edge websites for small businesses to boost their online presence and drive results.'
+      keywordContent='web design, web development, custom websites, small business web design,Web solutions, professional web services' >
 
       <div className='bg-[#032127]'>
-{/*         <video
-          className="absolute opacity-15 top-0 left-0 w-full object-cover"
-          src="/video/bgvideo.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        ></video> */}
-        <div className='px-4 max-w-screen-xl mx-auto pt-28 flex items-start flex-col justify-center'>
-          <div className='md:w-[50%]'>
+        <div className='px-4 max-w-screen-xl mx-auto pt-28 flex items-start'>
+          <div className='md:w-[50%] w-full'>
             <span className='font-Font1 text-white px-3 py-1 rounded-2xl border-x-1 border-y-2 text-sm border-[rgba(126,214,223,.25)] bg-[rgba(126,214,233,.15)] animate__animated animate__fadeInDown'>Custom Development Solutions</span>
-            <h1 className='font-Font1 my-6 uppercase text-white  md:text-3xl text-2xl w-full maw-w-[100%] animate__animated animate__fadeInDown'>
-              Top <span className='text-[#FFA500]'>Web Design</span> & <span className='text-[#FFA500]'>Development Services</span> for Small Businesses<br />
-              Build a Powerful <span className='text-[#00BFFF]'>Online Presence</span> with Professional <span className='text-[#00BFFF]'>Web Solutions</span>
+            <h1 className='font-Font1 my-6 text-white md:text-4xl text-2xl w-full max-w-[1200px] mx-auto animate__animated animate__fadeInDown tracking-wide leading-tight'>
+              Be Visible in the Digital World with a Powerful Website: From Small Business to the Top!
             </h1>
-            <p className='text-white font-sans text-sm md:text-xl  maw-w-[100%] opacity-90 animate__animated animate__fadeInUp'>
-              Need a <span className='text-[#FFA500]'>trusted web design and development partner</span>? We create <span className='text-[#00BFFF]'>custom, cutting-edge websites</span> that help small businesses grow. Our <span className='text-[#FFA500]'>award-winning web services</span> are designed to boost your <span className='text-[#00BFFF]'>online visibility</span> and drive results in a <span className='text-[#FFA500]'>competitive digital world</span>.
+            <p className='text-white font-sans text-sm md:text-xl max-w-[1200px] mx-auto opacity-95 animate__animated animate__fadeInUp leading-relaxed mb-8'>
+              We take your brand to the next level with custom-designed websites, SEO optimization and sustainable digital strategies. Startups, those aiming for growth or those who want to maintain their leadership: The right solution for you is here!
             </p>
+          </div>
+          <div className='md:w-[50%] hidden md:block right-0 absolute mt-0 -z-0'>
+            <LandingDemoSlider />
           </div>
         </div>
         <div className='md:mt-16 w-[100%] mx-auto md:w-full h-[150px] md:h-[530px] flex justify-center relative animate__animated animate__fadeInUp'>
@@ -62,7 +57,6 @@ export default function Home() {
                   alt=''
                   fill
                   className=''
-
                 />
               </div>
             </div>
