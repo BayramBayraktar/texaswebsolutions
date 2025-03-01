@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <Layout
-      title="Top Web Design near you & Development |Texsas Web Solutions"
+      title="Top Web Design near you & Development | Texsas Web Solutions"
       description='Web Solutions offers the best web design and development service. We create custom, cutting-edge websites for small businesses to boost their online presence and drive results.'
       keywordContent='web design, web development, custom websites, small business web design,Web solutions, professional web services' >
 

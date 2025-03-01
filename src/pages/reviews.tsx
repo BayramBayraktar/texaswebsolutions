@@ -7,9 +7,9 @@ import WeCreatedSlider from '@/components/weCreated'
 const ReviewsPage = () => {
     return (
         <Layout
-            title="Customer Reviews for Top Web Design & Development Services in Texas | Texsas Web Solutions"
-            description="Read genuine customer reviews for Texsas Web Solutions, the leading web design and development company in Texas. See why small businesses trust us to create custom, high-performing websites."
-            keywordContent="web design reviews Texas, web development reviews Texas, Texas web solutions reviews, customer feedback Texas, Texsas Web Solutions reviews, professional web services Texas" >
+            title="Customer Reviews for Top Web Design & Development Services | Texsas Web Solutions"
+            description="Read genuine customer reviews for Texas Web Solutions, a leading web design and development company. Discover why businesses trust us to create custom, high-performing websites that drive results."
+            keywordContent="web design reviews, web development reviews, custom website reviews, customer feedback web design, professional web services, SEO-friendly websites, responsive web design reviews" >
             <Reviews />
             <WeCreatedSlider />
         </Layout>
