@@ -8,7 +8,8 @@ export default function Document() {
         type="image/x-icon"
       />
       <meta name="trustpilot-one-time-domain-verification-id" content="97da5b14-94e8-43a9-bfbb-a691e9136b74"/>
-
+      {/* google search console */}
+      <meta name="google-site-verification" content="AXO1SCzCW_G1LbqQ8UO8nAwl5lJfj61p-EhaIXp-mxs" />
       <link
         rel="stylesheet"
         type="text/css"
