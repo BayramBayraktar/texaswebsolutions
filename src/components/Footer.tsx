@@ -2,7 +2,8 @@ import Link from "next/link";
 import { FaPlus } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import { useState } from 'react';
-import Price from '@/components/price'
+//import Price from '@/components/price'
+
 
 export default function Footer() {
 
@@ -53,7 +54,7 @@ export default function Footer() {
             answer: "Use Google Search Console for technical insights, Google Analytics 4 for traffic analysis, Ahrefs/SEMrush for keyword tracking, and custom dashboards to monitor ROI metrics."
         },
         {
-            question: "What content length performs best for SEO in 2024?",
+            question: "What content length performs best for SEO in 2025?",
             answer: "Comprehensive content (1,500-2,500 words) ranks best, but focus on quality over quantity. Use semantic keywords and answer searcher intent through pillar pages and topic clusters."
         },
         {
@@ -61,7 +62,7 @@ export default function Footer() {
             answer: "Voice search requires natural language optimization. Target question phrases, optimize for featured snippets, and ensure your business information appears in knowledge panels."
         },
         {
-            question: "What are the most important Google ranking factors in 2024?",
+            question: "What are the most important Google ranking factors in 2025?",
             answer: "Top factors include E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness), Core Web Vitals, mobile-first indexing, and high-quality content aligned with user intent."
         },
         {
@@ -76,7 +77,8 @@ export default function Footer() {
 
     return (
         <div>
-            <Price />
+            {/*  <Price /> */}
+  
             <div className="my-12 max-w-screen-xl mx-auto px-3">
                 {faqData.map((item, index) => (
                     <div key={index} onClick={() => toggleAccordion(index)} className="p-6 bg-gray-50 rounded-xl mt-3 cursor-pointer shadow-lg">

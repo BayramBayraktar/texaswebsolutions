@@ -3,6 +3,7 @@ import Layout from '../layout/index'
 
 import Reviews from '@/components/reviews'
 import WeCreatedSlider from '@/components/weCreated'
+import VideoSlider from '@/components/videoSlider'
 
 const ReviewsPage = () => {
     return (
@@ -12,6 +13,7 @@ const ReviewsPage = () => {
             keywordContent="web design reviews, web development reviews, custom website reviews, customer feedback web design, professional web services, SEO-friendly websites, responsive web design reviews" >
             <Reviews />
             <WeCreatedSlider />
+            <VideoSlider/>
         </Layout>
     )
 }

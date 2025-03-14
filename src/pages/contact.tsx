@@ -6,6 +6,8 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import Form from '@/components/Form';
+import Reviews from '@/components/reviews'
+import VideoSlider from '@/components/videoSlider'
 
 const Contact = () => {
     return (
@@ -39,8 +41,10 @@ const Contact = () => {
                     </div>
                     <Form />
                 </div>
+                <VideoSlider />
                 <WeCreatedSlider />
             </div>
+            <Reviews />
         </Layout>
     );
 };
