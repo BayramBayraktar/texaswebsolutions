@@ -20,12 +20,16 @@ export default function Home() {
         <div className='px-4 max-w-screen-xl mx-auto pt-28 flex items-start'>
           <div className='md:w-[50%] w-full'>
             <span className='font-Font1 text-white px-3 py-1 rounded-2xl border-x-1 border-y-2 text-sm border-[rgba(126,214,223,.25)] bg-[rgba(126,214,233,.15)] animate__animated animate__fadeInDown'>Custom Development Solutions</span>
+
             <h1 className='font-Font1 my-6 text-white md:text-4xl text-2xl w-full max-w-[1200px] mx-auto animate__animated animate__fadeInDown tracking-wide leading-tight'>
               Be Visible in the Digital World with a Powerful Website: From Small Business to the Top!
             </h1>
             <p className='text-white font-sans text-sm md:text-xl max-w-[1200px] mx-auto opacity-95 animate__animated animate__fadeInUp leading-relaxed mb-8'>
               We take your brand to the next level with custom-designed websites, SEO optimization and sustainable digital strategies. Startups, those aiming for growth or those who want to maintain their leadership: The right solution for you is here!
             </p>
+            <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="67ac62b18525b99cf909d19c" data-style-height="52px" data-style-width="100%">
+              <a href="https://www.trustpilot.com/review/texsaswebsolutions.com" target="_blank" rel="noopener">Trustpilot</a>
+            </div>
           </div>
           <div className='md:w-[50%] hidden md:block right-0 absolute mt-0 -z-0'>
             <LandingDemoSlider />

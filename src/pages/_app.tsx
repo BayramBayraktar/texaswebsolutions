@@ -74,6 +74,11 @@ export default function App({ Component, pageProps }: AppProps) {
           `,
         }}
       />
+
+      <Script
+        src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+        strategy="lazyOnload"
+      />
       <Component {...pageProps} />
     </>
   );
