@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         try {
             await ConnectDb();
             await newContact.save();
-            return res.json('Your message has been successfully delivered, we will contact you as soon as possible.');
+            return res.json('Mesajımız başarıyla teslim edildi, en kısa sürede sizinle iletişime geçeceğiz.');
         } catch (error) {
             console.error(error);
             return res.status(500).json({ error: 'Internal Server Error' });

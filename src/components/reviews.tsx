@@ -42,7 +42,7 @@ export default function ReviewsSlider() {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 3000,
-        rtl:true,
+        rtl: true,
         responsive: [
             {
                 breakpoint: 1024,
@@ -64,49 +64,49 @@ export default function ReviewsSlider() {
             }
         ]
     };
-    
-    
+
+
 
     const reviews = [
         {
-            text: "This agency transformed our online presence! Their SEO strategies tripled our website traffic, and we're now ranking on the first page of Google. Our sales have never been this high!",
-            name: "Michael R.",
-            position: "E-commerce Store Owner"
+            text: "Bu ajans dijital varlığımızı tamamen değiştirdi! SEO stratejileriyle web sitemizin trafiği 3 kat arttı ve Google'da ilk sayfadayız. Satışlarımız hiç bu kadar iyi olmamıştı!",
+            name: "Ahmet Y.",
+            position: "Bursa E-ticaret Mağazası Sahibi"
         },
         {
-            text: "Our website was outdated, but this team not only redesigned it but also optimized it for SEO. We've seen a 200% increase in leads within just 3 months. Highly recommend their services!",
-            name: "Laura B.",
-            position: "Marketing Manager"
+            text: "Eski kalan web sitemizi yenileyip SEO optimizasyonu yaptılar. Sadece 3 ayda %200 daha fazla müşteri adayı elde ettik. Kesinlikle tavsiye ederim!",
+            name: "Elif K.",
+            position: "Bursa Pazarlama Müdürü"
         },
         {
-            text: "Thanks to their expertise in SEO and web design, our online bookings have doubled. They truly understand how to make a website work for your business!",
-            name: "David K.",
-            position: "Tourism Business Owner"
+            text: "SEO ve web tasarım uzmanlıkları sayesinde online rezervasyonlarımız ikiye katlandı. İşletmemize değer katmayı gerçekten çok iyi biliyorlar!",
+            name: "Mehmet D.",
+            position: "Bursa Otel İşletmecisi"
         },
         {
-            text: "We were struggling to stand out online, but this agency changed everything. Their SEO and content strategies helped us dominate our local market. Our revenue has grown by 150%!",
-            name: "Sophie W.",
-            position: "Cafe Owner"
+            text: "Online ortamda sıradan bir işletmeydik ama bu ajans her şeyi değiştirdi. SEO ve içerik stratejileriyle Bursa pazarında lider olduk. Ciromuz %150 arttı!",
+            name: "Ayşe T.",
+            position: "Bursa Kafe İşletmecisi"
         },
         {
-            text: "Our website was invisible on Google, but after working with this team, we're now ranking for all our target keywords. The results speak for themselves – our business has grown exponentially!",
-            name: "Ethan T.",
-            position: "Fitness Studio Owner"
+            text: "Web sitemiz Google'da görünmüyordu ama bu ekip sayesinde tüm hedef kelimelerde üst sıralardayız. Sonuçlar ortada - işletmemiz katlanarak büyüdü!",
+            name: "Can B.",
+            position: "Bursa Spor Salonu Sahibi"
         },
         {
-            text: "The SEO and digital marketing strategies they implemented have been a game-changer for us. Our website traffic has quadrupled, and we're converting more leads than ever before!",
-            name: "Olivia M.",
-            position: "Interior Design Firm Owner"
+            text: "Uyguladıkları SEO ve dijital pazarlama stratejileri bizim için dönüm noktası oldu. Web trafiğimiz 4 kat arttı ve çok daha fazla müşteriye ulaşıyoruz!",
+            name: "Zeynep A.",
+            position: "Bursa Mobilya Tasarım Atölyesi Sahibi"
         },
         {
-            text: "We went from zero online presence to dominating our niche, all thanks to this agency. Their SEO and web design services are worth every penny. Our business has never been better!",
-            name: "Daniel H.",
-            position: "Tech Startup Founder"
+            text: "Sıfır online varlıkla başladığımız işimizde, bu ajans sayesinde sektörümüzde öne çıktık. SEO ve web tasarım hizmetleri her kuruşa değer. İşletmemiz zirvede!",
+            name: "Burak K.",
+            position: "Bursa Yazılım Şirketi Kurucusu"
         },
         {
-            text: "Our website is now a lead-generating machine! The SEO optimizations and modern design have helped us attract more clients and close deals faster. This team is simply the best!",
-            name: "Rachel L.",
-            position: "Real Estate Agent"
+            text: "Web sitemiz artık müşteri çeken bir makine! SEO optimizasyonları ve modern tasarım sayesinde daha çok müşteriye ulaşıp daha hızlı satış yapıyoruz. Bu ekip harika!",
+            name: "Deniz Ö.",
+            position: "Bursa Emlak Danışmanı"
         }
     ];
 
@@ -115,14 +115,14 @@ export default function ReviewsSlider() {
             <div className='w-full max-w-screen-xl mx-auto px-3 py-24'>
                 <div className='mb-12'>
                     <h1 className='text-white text-center font-Font1 text-3xl md:text-6xl'>
-                        What Our <span className='text-[#FFA500]'>Clients</span> Say <br /> About Us
+                        Müşteriler <span className='text-[#FFA500]'>Bizim </span>Hakkımızda <br />  Neler söyledi
                     </h1>
                     <h2 className='text-white text-center font-sans text-base md:text-lg mt-4'>
-                        Hear It Straight from Those Who Matter Most – Our Valued Clients
+                        Doğrudan En Önemli Kişilerden Dinleyin - Değerli Müşterilerimiz
                     </h2>
                 </div>
 
-              
+
                 <div className="slider-wrapper mb-4">
                     <Slider {...settings}>
                         {reviews.slice(0, 3).map((review, index) => (

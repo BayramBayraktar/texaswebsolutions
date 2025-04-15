@@ -6,14 +6,11 @@ import { IoClose } from "react-icons/io5";
 import { GrContact } from "react-icons/gr";
 
 
-
 export default function Header() {
     const router = useRouter();
     const headerRef = useRef<HTMLDivElement>(null);
     const buttonRef = useRef<HTMLButtonElement>(null);
-
     const [isActiveMenu, setisActiveMenu] = useState<boolean>(false)
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -52,35 +49,35 @@ export default function Header() {
             <div className="max-w-screen-xl mx-auto flex py-5 items-center justify-between ">
 
                 <div className="flex flex-col items-center">
-                    <Link className="text-white font-Font1 text-4xl md:text-3xl" href="/" aria-label="go to homepage">-TWS-</Link>
+                    <Link className="text-white font-Font1 text-4xl md:text-3xl" href="/" aria-label="Ana sayfaya git">Web Tasarım ve Kodlama</Link>
                 </div>
 
                 <nav className={`${isActiveMenu && 'isActiveMenu'} flex-1 hidden md:flex`}>
                     <ul className="flex flex-1  justify-center items-center gap-x-3">
                         <li>
                             <Link href="/" className={`${router.pathname == '/' ? " active-link text-[#7ed6df]" : "text-white"}  text-2xl md:text-sm font-semibold transition-colors duration-200`}>
-                                Home
+                                AnaSayfa
                             </Link>
                         </li>
                         <li>
-                            <Link href="/about" className={`${router.pathname == '/about' ? "active-link text-[#7ed6df]" : "text-white"} text-2xl md:text-sm  font-semibold transition-colors duration-200`}>
-                                About
+                            <Link href="/hakkimizda" className={`${router.pathname == '/hakkimizda' ? "active-link text-[#7ed6df]" : "text-white"} text-2xl md:text-sm  font-semibold transition-colors duration-200`}>
+                                Hakkimizda
                             </Link>
                         </li>
                         <li>
-                            <Link href="/service" className={`${router.pathname.startsWith('/service') ? "active-link text-[#7ed6df]" : "text-white"} text-2xl md:text-sm  font-semibold transition-colors duration-200`}>
-                                Service
+                            <Link href="/hizmetler" className={`${router.pathname.startsWith('/hizmetler') ? "active-link text-[#7ed6df]" : "text-white"} text-2xl md:text-sm  font-semibold transition-colors duration-200`}>
+                                Hizmetler
                             </Link>
                         </li>
                         <li>
-                            <Link href="/reviews" className={`${router.pathname == '/reviews' ? "active-link text-[#7ed6df]" : "text-white"} text-2xl md:text-sm  font-semibold transition-colors duration-200`}>
-                                Reviews
+                            <Link href="/yorumlar" className={`${router.pathname == '/yorumlar' ? "active-link text-[#7ed6df]" : "text-white"} text-2xl md:text-sm  font-semibold transition-colors duration-200`}>
+                                Yorumlar
                             </Link>
                         </li>
                     </ul>
                     <div className="cursor-pointer text-center mt-10 md:mt-0">
-                        <Link className="px-6 py-2 rounded-3xl bg-[#7ed6df] shadow-[0_0_10px_rgba(126,214,223,0.4),0_0_20px_rgba(126,214,223,0.2)] text-black active-link font-Font1 text-2xl md:text-sm  " href="/contact" aria-label="Contact">
-                            Contact
+                        <Link className="px-6 py-2 rounded-3xl bg-[#7ed6df] shadow-[0_0_10px_rgba(126,214,223,0.4),0_0_20px_rgba(126,214,223,0.2)] text-black active-link font-Font1 text-2xl md:text-sm  " href="/bursa-web-tasarim-iletisim" aria-label="bursa-web-tasarim-iletisim">
+                            İletişim
                         </Link>
                     </div>
                 </nav>
@@ -96,8 +93,8 @@ export default function Header() {
                     )
                 }
             </div>
-            <div className={` ${router.pathname === '/contact' && 'hidden'} block md:hidden fixed bottom-4 right-4`}>
-                <Link className=" text-black active-link text-center  shadow-sm shadow-black  font-Font1" href="/contact" aria-label="Contact">
+            <div className={` ${router.pathname === '/' && 'hidden'} block md:hidden fixed bottom-4 right-4`}>
+                <Link className=" text-black active-link text-center  shadow-sm shadow-black  font-Font1" href="/bursa-web-tasarim-iletisim" aria-label="bursa-web-tasarim-iletisim">
                     <GrContact className="text-2xl w-12 h-12 p-2 rounded-full bg-[#7ed6df]" />
                 </Link>
             </div>

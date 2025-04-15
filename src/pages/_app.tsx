@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import WhatsappButton from "@/components/whatsappButton";
 import Script from 'next/script';
 import "@/styles/globals.css";
 import 'animate.css';
@@ -79,6 +80,7 @@ export default function App({ Component, pageProps }: AppProps) {
         src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         strategy="lazyOnload"
       />
+      <WhatsappButton />
       <Component {...pageProps} />
     </>
   );

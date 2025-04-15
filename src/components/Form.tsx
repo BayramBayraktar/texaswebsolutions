@@ -36,23 +36,23 @@ const Form = () => {
             console.error(error);
             setState((prev) => ({
                 ...prev,
-                responsemsg: "An error occurred. Please try again later."
+                responsemsg: "Bir hata oluştu. Lütfen daha sonra tekrar deneyin."
             }));
         }
     };
 
     return (
         <div className='md:w-[40%] flex flex-col gap-6 p-8 rounded-2xl bg-[#3c989ec2] shadow-lg'>
-            <h2 className='text-2xl font-Font1 text-white'>Get in Touch</h2>
-            <p className='text-sm text-white'>Fill out the form below, and we’ll get back to you as soon as possible.</p>
+            <h2 className='text-2xl font-Font1 text-white'>İletişime Geç</h2>
+            <p className='text-sm text-white'>Aşağıdaki formu doldurun, size en kısa sürede geri dönüş yapalım.</p>
 
             <div className='flex flex-col gap-1'>
-                <label htmlFor='name-form' className='text-base font-Font1 text-white'>NAME</label>
+                <label htmlFor='name-form' className='text-base font-Font1 text-white'>Adınız</label>
                 <input
                     value={state.Name}
                     onChange={(e) => setState((prev) => ({ ...prev, Name: e.target.value }))}
                     className='p-3 rounded-md font-Font1 bg-white/90 placeholder-gray-600'
-                    placeholder='Your Name'
+                    placeholder='Adınız'
                     id='name-form'
                     type='text'
                     alt='name-form'
@@ -60,12 +60,12 @@ const Form = () => {
             </div>
 
             <div className='flex flex-col gap-1'>
-                <label htmlFor='email-form' className='text-base font-Font1 text-white'>EMAIL</label>
+                <label htmlFor='email-form' className='text-base font-Font1 text-white'>Maill Adressi</label>
                 <input
                     value={state.Email}
                     onChange={(e) => setState((prev) => ({ ...prev, Email: e.target.value }))}
                     className='p-3 rounded-md font-Font1 bg-white/90 placeholder-gray-600'
-                    placeholder='Your Email'
+                    placeholder='Mail addresi'
                     id='email-form'
                     type='email'
                     alt='email-form'
@@ -73,12 +73,12 @@ const Form = () => {
             </div>
 
             <div className='flex flex-col gap-1'>
-                <label htmlFor='phone-form' className='text-base font-Font1 text-white'>PHONE</label>
+                <label htmlFor='phone-form' className='text-base font-Font1 text-white'>Telefon</label>
                 <input
                     value={state.Phone}
                     onChange={(e) => setState((prev) => ({ ...prev, Phone: e.target.value }))}
                     className='p-3 rounded-md font-Font1 bg-white/90 placeholder-gray-600'
-                    placeholder='Your Phone'
+                    placeholder='Telefon numarsı'
                     id='phone-form'
                     type='tel'
                     alt='phone-form'
@@ -86,12 +86,12 @@ const Form = () => {
             </div>
 
             <div className='flex flex-col gap-1'>
-                <label htmlFor='message-form' className='text-base font-Font1 text-white'>MESSAGE</label>
+                <label htmlFor='message-form' className='text-base font-Font1 text-white'>Bize Mesaj ilettin</label>
                 <textarea
                     value={state.Message}
                     onChange={(e) => setState((prev) => ({ ...prev, Message: e.target.value }))}
                     className='p-3 rounded-md font-Font1 bg-white/90 placeholder-gray-600'
-                    placeholder='Write Your Message...'
+                    placeholder='Bir şeyler yaz...'
                     id='message-form'
                     rows={4}
                 />
@@ -106,7 +106,7 @@ const Form = () => {
                 className='text-xl font-Font1 text-white py-3 px-5 rounded-2xl bg-black hover:bg-gray-800 transition-all'
                 type='button'
             >
-                SEND MESSAGE
+                Formu Gönder
             </button>
         </div>
     );

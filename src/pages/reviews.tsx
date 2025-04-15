@@ -8,12 +8,12 @@ import VideoSlider from '@/components/videoSlider'
 const ReviewsPage = () => {
     return (
         <Layout
-            title="Customer Reviews for Top Web Design & Development Services | Texsas Web Solutions"
-            description="Read genuine customer reviews for Texas Web Solutions, a leading web design and development company. Discover why businesses trust us to create custom, high-performing websites that drive results."
-            keywordContent="web design reviews, web development reviews, custom website reviews, customer feedback web design, professional web services, SEO-friendly websites, responsive web design reviews" >
+            title="Bursa Web Tasarım Hizmetlerimiz Hakkında Müşteri Yorumları | Web Tasarım ve Kodlama"
+            description="Bursa'da web tasarım ve SEO hizmetlerimizden faydalanan gerçek müşterilerimizin yorumlarını inceleyin. Profesyonel çözümlerimizle işletmelerin dijital dönüşüm hikayelerini keşfedin."
+            keywordContent="Bursa web tasarım yorumları, Bursa web sitesi memnuniyet, Bursa SEO hizmetleri değerlendirme, profesyonel web tasarım geri bildirim, Bursa dijital ajans referanslar, e-ticaret sitesi müşteri yorumları" >
             <Reviews />
             <WeCreatedSlider />
-            <VideoSlider/>
+            <VideoSlider />
         </Layout>
     )
 }
