@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import Head from "next/head";
 import Script from "next/script"; 
 
-
 //Components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -19,7 +18,6 @@ export default function MainLayout({
     title,
     description,
     keywordContent
-
 }: IMainLayout) {
     return (
         <div>
@@ -36,28 +34,27 @@ export default function MainLayout({
                 <meta property="og:description" content={description} />
 
                 <meta name="keywords" content={keywordContent} />
-
             </Head>
-              <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=AW-17416214452`}
-      />
-      <Script id="google-ads-tag" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-17416214452');
-        `}
-      </Script>
 
+            <Script
+                strategy="afterInteractive"
+                src={`https://www.googletagmanager.com/gtag/js?id=AW-17416214452`}
+            />
+            <Script id="google-ads-tag" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'AW-17416214452');
+                `}
+            </Script>
 
-            <!-- Event snippet for Kişi conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-17416214452/MpdVCN_axPwaELSv2fBA'});
-</script>
+            <Script id="google-ads-conversion" strategy="afterInteractive">
+                {`
+                    gtag('event', 'conversion', {'send_to': 'AW-17416214452/MpdVCN_axPwaELSv2fBA'});
+                `}
+            </Script>
 
-            
             <Header />
             {children}
             <Footer />
