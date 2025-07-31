@@ -50,6 +50,14 @@ export default function MainLayout({
           gtag('config', 'AW-17416214452');
         `}
       </Script>
+
+
+            <!-- Event snippet for Kişi conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-17416214452/MpdVCN_axPwaELSv2fBA'});
+</script>
+
+            
             <Header />
             {children}
             <Footer />
